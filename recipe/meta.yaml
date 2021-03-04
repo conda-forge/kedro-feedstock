@@ -22,7 +22,7 @@ requirements:
     - pip
     - python >=3.6,<3.9
   run:
-    - anyconfig >=0.9.7,<0.10.0
+    - anyconfig >=0.10.0,<0.11.0
     - cachetools >=4.1,<5
     - click <8.0
     - cookiecutter >=1.7.0,<1.8.0
