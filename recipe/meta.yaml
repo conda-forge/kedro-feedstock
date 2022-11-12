@@ -7,8 +7,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/quantumblacklabs/kedro/archive/{{ version }}.tar.gz
-  sha256: 596959f80ebbeef06234eeb0f2f8916ed7fdc8c0af5a5aae55835a2c88dd914c
+  #url: https://github.com/quantumblacklabs/kedro/archive/{{ version }}.tar.gz
+  #sha256: 596959f80ebbeef06234eeb0f2f8916ed7fdc8c0af5a5aae55835a2c88dd914c
+  url: https://github.com/rxm7706/kedro/archive/refs/tags/v0.18.3.1.tar.gz
+  sha256: b230ea252a26017abfd0c53f24eaece50c5ad5b4ce9899d53bda21df58007039
 
 build:
   number: 3
@@ -57,7 +59,7 @@ test:
     - mlflow
   commands:
     - kedro --help
-#    - pip check
+    - pip check
   requires:
     - pip
 
