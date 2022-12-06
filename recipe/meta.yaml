@@ -56,7 +56,7 @@ test:
 #    - mlflow
   commands:
     - kedro --help
-#    - pip check
+    - pip check
   requires:
     - pip
 
