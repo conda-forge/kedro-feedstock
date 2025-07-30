@@ -14,7 +14,7 @@ source:
   sha256: 33a7d1ff02a49af3cae187d8799591f8d58b214614e20e34f68030eb5fcd6bb8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
@@ -31,7 +31,7 @@ requirements:
     - attrs >=21.3
     - python-build >=0.7.0
     - cachetools >=4.1
-    - click >=4.0,<8.2.0
+    - click >=4.0,<8.2.2
     - cookiecutter >=2.1.1,<3.0
     - dynaconf >=3.1.2,<4.0
     - fsspec >=2021.4
