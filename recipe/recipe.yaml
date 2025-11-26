@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: kedro
-  version: "1.1.0"
+  version: "1.1.1"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/kedro-${{ version }}.tar.gz
-  sha256: 3a73196efff2edb928c15a64b0fb2bd448d284d35d4f6f1115988b5914bd3fb0
+  sha256: 1510b721539afe58351cf81a0ce5a34957310d0f6811f0d340993d97f2147484
 
 build:
   number: 0
@@ -73,7 +73,7 @@ about:
   summary: Kedro helps you build production-ready data and analytics pipelines.
   homepage: https://kedro.org/
   description: |
-     A Python framework for creating reproducible, maintainable and modular data science code.
+    A Python framework for creating reproducible, maintainable and modular data science code.
   repository: https://github.com/kedro-org/kedro
   documentation: https://kedro.readthedocs.io/
   license: Apache-2.0
