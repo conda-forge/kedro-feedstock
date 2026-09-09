@@ -54,7 +54,6 @@ tests:
   - python:
       imports:
         - kedro
-        - kedro_benchmarks
       pip_check: true
   - requirements:
       run:
