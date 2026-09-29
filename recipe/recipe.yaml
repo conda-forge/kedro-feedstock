@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.6.0"
+  version: 1.7.0
 
 package:
   name: kedro
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/k/kedro/kedro-${{ version }}.tar.gz
-  sha256: 038fb0b8fc8eea9a4aecbf5cd2818c3bf0452198e29b80a194704528eb29ea0a
+  sha256: 50b654c0f6ec79c465bc913c1680ea6ad35fff287160262dce7f9d4c1bdbd493
 
 build:
   number: 0
@@ -20,10 +20,10 @@ build:
   noarch: python
   script:
     env:
-      WARNINGS: "ignore::kedro.KedroPythonVersionWarning"
-      PYTHONWARNINGS: "ignore::UserWarning"
+      WARNINGS: ignore::kedro.KedroPythonVersionWarning
+      PYTHONWARNINGS: ignore::UserWarning
     content:
-      - "${{ PYTHON }} -m pip install -vv --use-pep517 --no-deps --no-build-isolation ."
+      - ${{ PYTHON }} -m pip install -vv --use-pep517 --no-deps --no-build-isolation .
 
 requirements:
   host:
@@ -40,16 +40,14 @@ requirements:
     - fsspec >=2021.4
     - gitpython >=3.0
     - kedro-telemetry >=0.5.0
-    - more-itertools >=8.14.0  # Added for more_itertools
+    - more-itertools >=8.14.0
     - omegaconf >=2.1.1
     - parse >=1.19.0
     - pluggy >=1.0
     - pyyaml >=4.2,<7.0
     - rich >=12.0,<16.0
-    - tomli >=1.1.0  #- toml >=0.10.0  # Added Manually Earlier
     - tomli-w
     - typing_extensions >=4.0
-
 tests:
   - python:
       imports:
@@ -61,8 +59,8 @@ tests:
         - python ${{ python_min }}.*
     script:
       env:
-        WARNINGS: "ignore::kedro.KedroPythonVersionWarning"
-        PYTHONWARNINGS: "ignore::UserWarning"
+        WARNINGS: ignore::kedro.KedroPythonVersionWarning
+        PYTHONWARNINGS: ignore::UserWarning
       interpreter: python
       content: |
         import kedro
