@@ -48,19 +48,18 @@ requirements:
     - rich >=12.0,<16.0
     - tomli-w
     - typing_extensions >=4.0
+
 tests:
   - python:
       imports:
         - kedro
       pip_check: true
+      python_version: ${{ python_min }}.*
   - requirements:
       run:
         - pip
         - python ${{ python_min }}.*
     script:
-      env:
-        WARNINGS: ignore::kedro.KedroPythonVersionWarning
-        PYTHONWARNINGS: ignore::UserWarning
       interpreter: python
       content: |
         import kedro
